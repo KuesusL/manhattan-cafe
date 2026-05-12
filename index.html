@@ -3,57 +3,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Manhattan Cafe</title>
-    <link rel="icon" type="image/jpg"  href="images/favicon.jpg"
+    <link rel="icon" type="image/jpg"  href="images/favicon.jpg">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: black; color: rgb(168, 168, 168);">
+<body>
     <header>
-        <h1>Manhattan Cafe :3💖</h1>
-        <hr>
-        <nav>
-            <ul>
-                <li><a href="idk.html">????</a></li>
-            </ul>
+        <h1 id="judul">Manhattan Cafe :3💖</h1>
+        <nav class="nav">
+            <a href="idk.html">????</a>
+            <a href="#form-comment">Comment</a>
         </nav>
-        <hr>
-        <a href="https://umamusume.fandom.com/wiki/Manhattan_Cafe" target="_blank">
-            <img 
-                src="images/manhattan.jpg" 
-                width="400" 
-                height="400" 
-                title="My Lovely Wife"
-                alt="Manhattan Cafe"
-            >
-        </a>
+        <div id="photo">
+            <a href="https://umamusume.fandom.com/wiki/Manhattan_Cafe" target="_blank">
+                <img 
+                    src="images/manhattan.jpg" 
+                    width="400" 
+                    height="400" 
+                    title="My Lovely Wife"
+                    alt="Manhattan Cafe"
+                    id="cafe-image"
+                >
+            </a>
+        </div>
     </header>
-    <hr>
     <main>
-        <section id="line1">
+        <section  class="voiceline" id="line1">
             <h2>I'm... right here, with someone you can't see.</h2>
             <audio controls src="audios/manhattancafe_voice.mp3"></audio>
         </section>
-        <hr>
-        <section id="biodata">
-            <h2>Biodata:</h2>
-            <ul>
-                <li>Height: 155cm</li>
-                <li>Birthday: March 5</li>
-                <li>VA: Yui Ogura</li>
-            </ul>
-        </section>
-        <hr>
-        <section id="reason">
-            <h2>Top 5 Reasons I like her:</h2>
-            <ul>
-                <li>Her Personality</li>
-                <li>Her Black Hair</li>
-                <li>Her Soft and "Quiet" Voice</li>
-                <li>Her looks</li>
-                <li>And, Her Perseverance</li>
-            </ul>
-        </section>
-        <br>
-        <hr>
-        <br>
+        <div class="info-container">
+            <section id="biodata" class="card">
+                <h2>Biodata:</h2>
+                <ul>
+                    <li>Height: 155cm</li>
+                    <li>Birthday: March 5</li>
+                    <li>VA: Yui Ogura</li>
+                </ul>
+            </section>
+            <section id="reason" class="card">
+                <h2>Top 5 Reasons I like her:</h2>
+                <ul>
+                    <li>Her Personality</li>
+                    <li>Her Black Hair</li>
+                    <li>Her Soft and "Quiet" Voice</li>
+                    <li>Her looks</li>
+                    <li>And, Her Perseverance</li>
+                </ul>
+            </section>
+        </div>
         <section id="form-comment">
             <form>
                 <label for="name">Name:</label>
