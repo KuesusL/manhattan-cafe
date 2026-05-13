@@ -10,7 +10,7 @@ body {
 }
 
 #judul{
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 30;
 }
 
@@ -49,6 +49,7 @@ body {
     margin-bottom: 5px;
     text-align: left;
     line-height: 20px;
+    overflow: auto
 }
 
 .info-container {
@@ -123,4 +124,19 @@ button:hover {
 #form-comment {
     margin: 20px;
     background-color: #1214163d;
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 15px;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
