@@ -124,6 +124,7 @@ input {
     color: white;
     padding: 10px;
     outline: none;
+    margin: 12;
 }
 
 textarea {
@@ -137,6 +138,7 @@ textarea {
     width: 100%;
     box-sizing: border-box;
     resize: none;
+    margin: 12px;
 }
 
 button {
