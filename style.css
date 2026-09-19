@@ -137,7 +137,7 @@ nav a:hover {
 .progress-bar {
   background: linear-gradient(90deg, var(--glow-indigo), var(--glow-purple));
   height: 100%;
-  width: 0%; /* Akan diupdate oleh JavaScript */
+  width: 0%;
   box-shadow: 0 0 8px var(--glow-purple);
   transition: width 0.1s linear;
 }
