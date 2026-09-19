@@ -27,9 +27,19 @@
         </div>
     </header>
     <main>
-        <section  class="voiceline" id="line1">
-            <h2>I'm... right here, with someone you can't see.</h2>
-            <audio controls src="audios/manhattancafe_voice.mp3"></audio>
+        <section class="voiceline" id="line1">
+            <h2>"I'm... right here, with someone you can't see."</h2>
+    
+            <audio id="voice-audio" src="audios/manhattancafe_voice.mp3"></audio>
+
+            <div class="custom-audio-player">
+                <button type="button" id="play-btn" class="play-btn">▶</button>
+                <div class="audio-info">
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <div class="info-container">
             <section id="biodata" class="card">
@@ -86,10 +96,6 @@
         <p>Made with love by Lael💖</p>
     </footer>
 
-    <script>
-        function showMsg(){
-            alert("Not implemented yet");
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

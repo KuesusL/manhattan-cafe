@@ -1,166 +1,289 @@
-@media (max-width: 480px) {
-    * {
-        font-size: 15px;
-    }
-
-    .info-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .card {
-        flex-direction: column;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-body {
-     background-color: #0d1117; 
-     color: rgb(255, 255, 255);
+/* 1. VARIABEL TEMA & RESET BASE */
+:root {
+  --bg-dark: #07050f;          
+  --bg-deep: #100d23;          
+  --text-primary: #f1f1f6;     
+  --text-secondary: #9aa0b9;   
+  
+  --glow-indigo: #6366f1;      
+  --glow-purple: #a855f7;      
+  --glow-dark-violet: rgba(147, 51, 234, 0.15); 
 }
 
 * {
-    font-size: 23px;
-    font-family: sans-serif;
-    line-height: 25px;
-}
-
-#judul{
-    font-size: 40px;
-    margin-top: 30;
-}
-
-.voiceline {
-    background-color: #161c25;
-    border-radius: 8px;
-    padding-left: 10;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-}
-
-#cafe-image {
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-#cafe-image:hover {
-    transform: scale(1.03);
-}
-
-.card {
-    background-color: #161c25;
-    flex: 1;
-    border-radius: 5px;
-    padding-left: 10;
-    padding-block: 1px;
-    margin-bottom: 5px;
-    text-align: left;
-    line-height: 20px;
-    overflow: auto;
-    transition: 0.5s;
-    padding-right: 50px;
-}
-
-.info-container {
-    display: flex;
-    margin: auto;
-    margin-top: 25px;
-    text-align: center;
-    gap: 40px;
-    width: 90%;
-}
-
-nav {
-    background-color: #161925;
-    backdrop-filter: blur(10px);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    color: lightblue;
-    gap: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-nav a{
-    transition: 0.3s;
-    text-decoration: none;
-    color: lightgray
-}
-
-a:visited {
-    color: gray 
-}
-
-a:hover {
-    color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-input {
-    background-color: #0d1117;
-    border-color: #161925;
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    outline: none;
-    margin: 12;
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(circle at 50% 50%, #15112a 0%, #05040a 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-textarea {
-    background-color: #0d1117;
-    border-color: #161925;
-    border-width: 3px;
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-    resize: none;
-    margin: 12px;
+/* 2. TIPOGRAFI & HEADER */
+#judul {
+  font-size: 2.5rem;
+  margin-top: 30px;
+  text-align: center;
+  text-shadow: 0 0 10px var(--glow-indigo);
 }
 
-button {
-    padding: 5px;
-    background-color: #414953;
-    margin-top: 10px;
-    border-radius: 6px;
-    text-align: center;
-    transition: 0.2s ease;
-    color: lightgray;
+.voiceline {
+  background-color: rgba(22, 28, 37, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+  max-width: 600px;
+  font-style: italic;
 }
 
-button:hover {
-    cursor: pointer;
-    transform: scale(1.09);
+nav {
+  background: rgba(16, 13, 35, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  max-width: 90%;
+  margin: 20px auto;
 }
 
-#form-comment {
-    margin: 20px;
-    background-color: #1214163d;
+nav a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--glow-purple);
+}
+
+/* 4. MEDIA & GAMBAR */
+#photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(10, 7, 22, 0.7);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  padding: 10px 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 380px;
+  margin: 15px auto 0 auto;
+}
+
+.play-btn {
+  background: linear-gradient(135deg, var(--glow-indigo), var(--glow-purple));
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--glow-purple);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px var(--glow-purple);
+}
+
+.audio-info {
+  flex: 1;
+}
+
+.progress-container {
+  background: rgba(255, 255, 255, 0.1);
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--glow-indigo), var(--glow-purple));
+  height: 100%;
+  width: 0%; /* Akan diupdate oleh JavaScript */
+  box-shadow: 0 0 8px var(--glow-purple);
+  transition: width 0.1s linear;
+}
+
+#cafe-image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-bottom: 20px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+#cafe-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px var(--glow-dark-violet);
+}
+
+/* 5. KONTAINER & KARTU KONTEN */
+.info-container {
+  display: flex;
+  margin: 25px auto;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.card {
+  background: rgba(16, 13, 35, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 16px;
+  flex: 1;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6),
+              0 0 15px var(--glow-dark-violet);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 0 30px 6px rgba(119, 131, 223, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8),
+              0 0 25px rgba(168, 85, 247, 0.3);
+}
+
+.card ul {
+  list-style: none; /* Menghilangkan titik hitam bawaan */
+  padding: 0;
+  margin-top: 15px;
+}
+
+.card li {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.card li strong {
+  color: var(--text-primary);
+}
+
+/* 6. FORMULIR & INPUT */
+#form-comment {
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(16, 13, 35, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input, textarea {
+  background-color: rgba(7, 5, 15, 0.8);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 12px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 15px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--glow-purple);
+  box-shadow: 0 0 8px var(--glow-dark-violet);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--glow-indigo), var(--glow-purple));
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--glow-purple);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glow-purple), transparent);
+  margin: 40px 0 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 30px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--glow-indigo);
+  text-decoration: none;
+}
+
+/* 7. MEDIA QUERIES  */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #judul {
+    font-size: 1.8rem;
+  }
 }
